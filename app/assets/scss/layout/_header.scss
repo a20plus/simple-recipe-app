@@ -1,0 +1,59 @@
+@use "sass:color";
+@use "../abstracts";
+
+.header {
+  height: 85vh;
+  background-color: abstracts.$color-primary;
+
+  &__menu-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__logo {
+    font-weight: 800;
+    cursor: pointer;
+    color: color.adjust(abstracts.$color-black, $lightness: 20%);
+  }
+
+  &__menu a {
+    margin: 0 1.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+  }
+  &__menu a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    top: 2.3rem;
+    height: 0.5rem;
+    border-radius: 2rem;
+    background: abstracts.$color-primary-dark;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &__menu a:hover {
+    color: abstracts.$color-black;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &__login {
+    color: abstracts.$color-primary-dark;
+  }
+  &__login a {
+    font-size: 1.7rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 0 1rem;
+  }
+}

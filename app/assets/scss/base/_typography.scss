@@ -1,5 +1,9 @@
+@use "../abstracts";
+
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Exo 2", sans-serif;
   font-weight: 400;
+  font-size: 1.6rem; 
   line-height: 1.7;
+  color: abstracts.$color-grey-dark;
 }

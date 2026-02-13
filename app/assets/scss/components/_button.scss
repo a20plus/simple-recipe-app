@@ -1,0 +1,27 @@
+@use "../abstracts";
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: abstracts.$default-font-size;
+  border: solid 1px abstracts.$color-primary-dark;
+
+  &:hover {
+    background-color: abstracts.$color-primary-dark;
+    color: abstracts.$color-primary;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  &--ping {
+    background-color: abstracts.$color-primary;
+    color: abstracts.$color-primary-dark;
+  }
+}
